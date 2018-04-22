@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textview_newtask_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/header_title"
+        android:textSize="50px" />
+
+    <EditText
+        android:id="@+id/edittext_newtask_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_newtask_title"
+        android:background="#000000"
+        android:gravity="center"
+        android:hint="@string/hint_title"
+        android:inputType="text"
+        android:textColor="#FFF753"
+        android:textColorHint="#FFF" />
+
+    <TextView
+        android:id="@+id/textview_newtask_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_newtask_title"
+        android:text="@string/header_summary"
+        android:textSize="50px" />
+
+    <EditText
+        android:id="@+id/edittext_newtask_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_newtask_summary"
+        android:background="#000000"
+        android:gravity="center"
+        android:hint="@string/hint_summary"
+        android:inputType="text"
+        android:textColor="#FFF753"
+        android:textColorHint="#fff" />
+
+    <TextView
+        android:id="@+id/textview_newtask_importance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_newtask_summary"
+        android:text="@string/importance_header"
+        android:textSize="50px" />
+
+    <EditText
+        android:id="@+id/edittext_newtask_importance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_newtask_importance"
+        android:background="#000000"
+        android:gravity="center"
+        android:hint="@string/hint_importance"
+        android:inputType="number"
+        android:textColor="#FFF753"
+        android:textColorHint="#fff" />
+
+    <Button
+        android:id="@+id/button_newtask_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_newtask_importance"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveTask"
+        android:text="@string/newtask_savetask"
+        android:textAllCaps="false" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_newtask_save"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/textview_newtask_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_tasks" />
+    </ScrollView>
+</RelativeLayout>
